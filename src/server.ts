@@ -37,3 +37,14 @@ console.log("MONGO_URL",process.env.MONGO_URL)
 
 // CLUSTER => DATABASE => COLLECTION => DOCUMENT
 
+// MONGOOS - JUDA QULAY IMKONIYATLARI KENG
+
+import mongoose from 'mongoose';
+
+mongoose
+.connect(process.env.MONGO_URL as string, {}) //Env ni ichidan qabul qilyabmiz bu malumotlarni
+.then((data) => {
+    console.log("Success");
+    const PORT = process.env.PORT ?? 3003;
+})
+.catch(err => console.log("Error on connection Mongodb", err));
