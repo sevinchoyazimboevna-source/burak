@@ -8,6 +8,7 @@
     "start:dev": "nodemon --exec ts-node src/server.ts",
     "train": "nodemon --exec python train.py",
     "build": "tsc",
+    "trainn": "nodemon --exec ts-node src/trainn.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "MIT",
