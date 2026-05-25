@@ -18,3 +18,20 @@
 // 2 DECOTAR
 
 // PATTERN - MEANS NAQSH
+ 
+
+//const moment = require('moment');
+// BU COMMON JS DA
+
+//import moment from 'moment';
+// MODUL JS
+
+// DOTENV- DOT ENVIRONMENTAL  VARIABLECON
+
+import dotenv from 'dotenv';
+dotenv.config(); 
+
+console.log("PORT",process.env.PORT)
+
+console.log("MONGO_URL",process.env.MONGO_URL)
+
