@@ -40,11 +40,15 @@ console.log("MONGO_URL",process.env.MONGO_URL)
 // MONGOOS - JUDA QULAY IMKONIYATLARI KENG
 
 import mongoose from 'mongoose';
+import app from "./app"; //chakirish
 
 mongoose
 .connect(process.env.MONGO_URL as string, {}) //Env ni ichidan qabul qilyabmiz bu malumotlarni
 .then((data) => {
     console.log("Success");
     const PORT = process.env.PORT ?? 3003;
+    app.listen(PORT, function() {
+      console.log(`The server is running successfully! ${PORT}`);
+    });
 })
 .catch(err => console.log("Error on connection Mongodb", err));
