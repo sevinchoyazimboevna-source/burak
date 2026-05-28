@@ -1,15 +1,16 @@
 import express from 'express';
-import path from "path"; //Core package buni ustanovka qib otirmimiz   
+import path from "path"; //Core package buni ustanovka qib otirmimiz  
+import router from './router'; 
 
 // 4ta bolim
 
 /*1-ENTRANCE */
 const app = express(); //express ni chakirish
 console.log("dirname", __dirname);
-app.use(express.static(path.join(__dirname, "public"))); //passga exportga qara
+app.use(express.static(path.join(__dirname, "public"))); //publica ulash
 // use methodni chaqirib bu middleware integration pattern. Static methodidan foydalanib path orqali manzilni beramiz
-app.use(express.urlencoded({ extended: true}));
-app.use(express.json()) //Rest api sifatidagi requestni json dataga otkazishga ruxsat
+app.use(express.urlencoded({ extended: true})); //bu Traditional api ga hizmat qilib html kodlarni chaqirish
+app.use(express.json())  //json formatdaki datani object korinishga otkazadi va Rest api ga hizmat kiiladi
 
 /*2-SESSION */
 /*3-VIEWS */
@@ -18,5 +19,6 @@ app.set("view engine", "ejs");
 
 
 /*4-ROUTERS */
+app.use('/', router); //Design pattern middleware 
 
 export default app; //app ishga tushishi uchun export qilishimiz kerak

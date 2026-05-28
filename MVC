@@ -1,0 +1,23 @@
+// MVC - model view controller
+
+// 1 CLIENT - browsrelarimiz, request yuboruvchi 
+
+// ikkisini orasida routerlar turadi
+
+// 2 CONTROLLER - markaziy rol, roter controller ga yollanadi
+// requestni cantol qiladi, katta mantik yozilmaydi.
+
+// keyin modelga buyruk yuvoradi
+
+// 3 MODEL - business logic , asosiy mantiqllar yoziladi.
+// 2 hil:
+// servise modul -controller uchun hizmat kiladi
+// schema modul - u database bilan ishlash crud qilish uchun
+
+// 4 VIEW- bu EJS miz html backenda qurib oladi
+
+// va keyin bu html ni qurib bolib controllerlarga taqdim kiladi u esa 
+// router orqali clientga qaytaradi
+
+
+// 5 DATABASE -
