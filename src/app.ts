@@ -1,6 +1,7 @@
 import express from 'express';
 import path from "path"; //Core package buni ustanovka qib otirmimiz  
 import router from './router'; 
+import routerAdmin from "./routerAdmin"
 
 // 4ta bolim
 
@@ -19,6 +20,15 @@ app.set("view engine", "ejs");
 
 
 /*4-ROUTERS */
-app.use('/', router); //Design pattern middleware 
+app.use("/admin", routerAdmin);  //SSR: EJS
+app.use('/', router); //Design pattern middleware  SPA: REACT
 
 export default app; //app ishga tushishi uchun export qilishimiz kerak
+
+
+// 1
+// SPA: SINGLE PAGE APPLICATION. 
+// USERLAR UCHUN REST API SERVER SIFATIDA ISHLATAR EKANMIZ!
+
+// 2
+// BSSR:EJS FRONTEDNI BACKENDA QURISH!
