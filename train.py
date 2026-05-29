@@ -15,21 +15,32 @@
 
 
 
-print("===========MITASK-M==============")
+# print("===========MITASK-M==============")
 
-def getSquareNumbers(arr):
-    result = [] #natijalarni saqlash uchun bosh list
-    for num in arr: 
+# def getSquareNumbers(arr):
+#     result = [] #natijalarni saqlash uchun bosh list
+#     for num in arr: 
 
-        obj = {
-            "number": num,
-            "square": num **2 #bu yerda 2 emas hohlagan number qoyib qiymat chikarsak boladi
-        }
+#         obj = {
+#             "number": num,
+#             "square": num **2 #bu yerda 2 emas hohlagan number qoyib qiymat chikarsak boladi
+#         }
 
-        result.append(obj)
+#         result.append(obj)
 
-    return result
+#     return result
 
-print(getSquareNumbers([1,2,5,7,4,9,0]))
+# print(getSquareNumbers([1,2,5,7,4,9,0]))
+
+
+print("===========MITASK-N==============")
+
+def palIndrom(word):
+    return word == word[::-1]
+
+print(palIndrom("mom"))
+print(palIndrom("dad"))
+print(palIndrom("abc"))
+print(palIndrom("Angel"))
 
 
