@@ -18,3 +18,13 @@
 // }
 
 // console.log(getSquareNumbers([1,2,4,5,7,8,9])); //good
+
+/* 
+PROJECT STANDARTS:
+- Login 
+- Naming : Camel case , function, method, variable!
+    class- Pascal 
+    folder - Kebab
+    css - Snake 
+-Error handlings
+*/
