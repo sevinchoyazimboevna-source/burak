@@ -19,6 +19,7 @@
 
 // console.log(getSquareNumbers([1,2,4,5,7,8,9])); //good
 
+
 /* 
 PROJECT STANDARTS:
 - Login 
@@ -28,3 +29,9 @@ PROJECT STANDARTS:
     css - Snake 
 -Error handlings
 */
+
+//API apllication programming interface.
+
+//traditional api 
+//rest api
+//graphql api
