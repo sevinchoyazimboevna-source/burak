@@ -33,14 +33,30 @@
 # print(getSquareNumbers([1,2,5,7,4,9,0]))
 
 
-print("===========MITASK-N==============")
+# print("===========MITASK-N==============")
 
-def palIndrom(word):
-    return word == word[::-1]
+# def palIndrom(word):
+#     return word == word[::-1]
 
-print(palIndrom("mom"))
-print(palIndrom("dad"))
-print(palIndrom("abc"))
-print(palIndrom("Angel"))
+# print(palIndrom("mom"))
+# print(palIndrom("dad"))
+# print(palIndrom("abc"))
+# print(palIndrom("Angel"))
+
+
+print("===========MITASK-0==============")
+
+def calculateSumOfNumbers(arr):
+    total = 0
+
+    for item in arr:
+        if type(item) == int or type(item) == float:
+            total += item
+
+    return total
+
+
+print(calculateSumOfNumbers([20, "30", {"son": 10}, True, 35]))
+print(calculateSumOfNumbers([7, "77", {"son": 70}, True, 37]))
 
 
