@@ -44,19 +44,57 @@
 # print(palIndrom("Angel"))
 
 
-print("===========MITASK-0==============")
+# print("===========MITASK-0==============")
 
-def calculateSumOfNumbers(arr):
-    total = 0
+# def calculateSumOfNumbers(arr):
+#     total = 0
 
-    for item in arr:
-        if type(item) == int or type(item) == float:
-            total += item
+#     for item in arr:
+#         if type(item) == int or type(item) == float:
+#             total += item
 
-    return total
-
-
-print(calculateSumOfNumbers([20, "30", {"son": 10}, True, 35]))
-print(calculateSumOfNumbers([7, "77", {"son": 70}, True, 37]))
+#     return total
 
 
+# print(calculateSumOfNumbers([20, "30", {"son": 10}, True, 35]))
+# print(calculateSumOfNumbers([7, "77", {"son": 70}, True, 37]))
+
+
+print("===========MITASK-P==============")
+
+
+def getInOne(obj):
+    result = []
+
+    for key in obj:
+        print(key)
+
+    for key in obj:
+        print(obj[key])
+    
+    for key in obj:
+        add = [key, obj[key]]
+        print(add)
+
+    result.append(add)
+
+    return result 
+
+print(getInOne({"a":19, "b":20, "c":21, "d":22}))
+
+
+
+# this is not for mitask!
+
+# def getSquares(arr):
+#     result = []
+#     for num in arr:
+#         obj = {
+#             "number": num,
+#             "square": num **2
+#         }
+#         result.append(obj)
+
+#     return result
+
+# print(getSquares([1,2,3,4,5]))
