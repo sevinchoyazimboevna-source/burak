@@ -44,9 +44,9 @@ restaurantController.processLogin = async (req: Request, res: Response) => {
     const result = await memberService.processLogin(input);
 
      res.send("Done");
-    } catch (err) {
+    } catch (err: any) {
         console.log("Error, processLogin:", err);
-        res.send(err);
+        res.send(err.message);
     }
 };
 
@@ -62,9 +62,9 @@ restaurantController.processSignup = async (req: Request, res: Response) => {
     const result = await memberService.processSignup(newMember);
 
      res.send("Done");
-    } catch (err) {
+    } catch (err: any) {
         console.log("Error, processSignup:", err);
-        res.end(err);
+        res.end(err.message);
     }
 };
 
