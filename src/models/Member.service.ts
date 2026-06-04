@@ -4,6 +4,8 @@ import Errors, {HttpCode, Message} from "../libs/Errors";
 import {MemberType} from "../libs/enums/member.enum";
 import * as bcrypt from "bcryptjs";
 
+// bcrypt — bu parollarni xavfsiz saqlash uchun ishlatiladigan hashlash algoritmi.
+
 class MemberService {
     private readonly memberModel;
 
