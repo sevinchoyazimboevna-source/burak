@@ -65,3 +65,50 @@ PROJECT STANDARTS:
 //()PEER TO PEER - BU YERDA MARKAZIY SERVER TUSHUNCHASI YOK, 
 //  Har bir kompyuter ham client, ham server bo‘lishi mumkin.
 // BOSHQARISH QIYIN 
+
+
+
+// SPA
+
+// TRADITIONAL FRONTED DEVLOPMEMT - BSSR - EJS (ADMINKA)NI QURAMIZ
+
+// MODERN FRONTED DEVELOPMENT  - FAQAT JSON DATA QABUL QILADI, 
+// VA OZI HTML NI OZI HOS QILADI.                    () SPA, ()RAECT  
+
+
+
+// public async signup(input: MemberInput): Promise<Member> { //promise faqat asyncrnsda
+//         const salt = await bcrypt.genSalt();
+//         input.memberPassword = await bcrypt.hash(input.memberPassword, salt);
+        
+//         try {
+//         const result = await this.memberModel.create(input);
+//         result.memberPassword = "";
+//         return result.toJson();
+//         } catch (err) {
+//             console.error("Error, model:signup", err);
+//             throw new Errors(HttpCode.BAD_REQUEST, Message.USED_NICK_PHONE);
+//         }
+
+//     }
+//     public async login(input: LoginInput): Promise<Member> {
+//       const member = await this.memberModel
+//       .findOne
+//       ({memberNick: input.memberNick},
+//       { memberNick: 1, memberPassword: 1})
+//       .exec();
+//      if(!member) throw new Errors(HttpCode.NOT_FOUND, Message.NO_MEMBER_NICK)
+      
+//     //  const isMatch = input.memberPassword === member.memberPassword;
+//      const isMatch = await bcrypt.compare(
+//         input.memberPassword,
+//          member.memberPassword)
+
+
+//      if(!isMatch) {
+//         throw new Errors(HttpCode.UNAUTHORIZED, Message.WRONG_PASSWORD);
+//      }
+
+//     return await this.memberModel.findById(member._id).lean().exec();
+//     }
+// }
