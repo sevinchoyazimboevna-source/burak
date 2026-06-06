@@ -98,3 +98,18 @@ print(getInOne({"a":19, "b":20, "c":21, "d":22}))
 #     return result
 
 # print(getSquares([1,2,3,4,5]))
+
+
+print("===========MITASK-Q==============")
+
+
+def isThereProperty(obj, prop):
+    if prop in obj:
+        return True
+    else:
+        return False
+    
+print(isThereProperty({"name": "Porsche"}, "name"))
+print(isThereProperty({"name": "Porsche"}, "car"))
+print(isThereProperty({"flower": "Porsche"}, "flower"))
+print(isThereProperty({"bmw": "Porsche"}, "bmw"))
