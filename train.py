@@ -60,27 +60,27 @@
 # print(calculateSumOfNumbers([7, "77", {"son": 70}, True, 37]))
 
 
-print("===========MITASK-P==============")
+# print("===========MITASK-P==============")
 
 
-def getInOne(obj):
-    result = []
+# def getInOne(obj):
+#     result = []
 
-    for key in obj:
-        print(key)
+#     for key in obj:
+#         print(key)
 
-    for key in obj:
-        print(obj[key])
+#     for key in obj:
+#         print(obj[key])
     
-    for key in obj:
-        add = [key, obj[key]]
-        print(add)
+#     for key in obj:
+#         add = [key, obj[key]]
+#         print(add)
 
-    result.append(add)
+#     result.append(add)
 
-    return result 
+#     return result 
 
-print(getInOne({"a":19, "b":20, "c":21, "d":22}))
+# print(getInOne({"a":19, "b":20, "c":21, "d":22}))
 
 
 
@@ -100,16 +100,25 @@ print(getInOne({"a":19, "b":20, "c":21, "d":22}))
 # print(getSquares([1,2,3,4,5]))
 
 
-print("===========MITASK-Q==============")
+# print("===========MITASK-Q==============")
 
 
-def isThereProperty(obj, prop):
-    if prop in obj:
-        return True
-    else:
-        return False
+# def isThereProperty(obj, prop):
+#     if prop in obj:
+#         return True
+#     else:
+#         return False
     
-print(isThereProperty({"name": "Porsche"}, "name"))
-print(isThereProperty({"name": "Porsche"}, "car"))
-print(isThereProperty({"flower": "Porsche"}, "flower"))
-print(isThereProperty({"bmw": "Porsche"}, "bmw"))
+# print(isThereProperty({"name": "Porsche"}, "name"))
+# print(isThereProperty({"name": "Porsche"}, "car"))
+# print(isThereProperty({"flower": "Porsche"}, "flower"))
+# print(isThereProperty({"bmw": "Porsche"}, "bmw"))
+
+
+print("===========MITASK-R==============")
+
+def calculate(expression):
+    return eval(expression)
+print(calculate("3+4"))
+print(calculate("77000+77"))
+print(calculate("777000+777"))

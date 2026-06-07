@@ -60,9 +60,9 @@ restaurantController.processSignup = async (req: AdminRequest, res: Response) =>
      
     console.log("Error, processSignup!!!!!!!", err);
     const message = 
-    err instanceof Errors ? err.message : Message.SOMETHING_WENT_WRONG;
+    err instanceof Errors ? err.message : Message.SOMETHING_WENT_WRONG; 
     res.send(`<script> alert("${message}"); window.location.replace
-    ('admin/signup) </script>`);
+    ('admin/signup) </script>`);//browserga javascript korinishida javob berish
   }
 };
 
