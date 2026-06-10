@@ -81,3 +81,4 @@ PROJECT STANDARTS:
 //authorithation
 //cookies
 //tokkens
+//send | render | redirect | json | end
