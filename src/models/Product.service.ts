@@ -1,8 +1,10 @@
+import ProductModel from "../schema/Product.model";
+
 class ProductService {
-   private readonly productService;
+   private readonly productModel;
 
     constructor() {
-        this.productService = ProductService 
+        this.productModel = ProductService;
 
     }
 }

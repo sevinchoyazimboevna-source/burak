@@ -82,3 +82,10 @@ PROJECT STANDARTS:
 //cookies
 //tokkens
 //send | render | redirect | json | end
+
+
+/* Validation:
+    Frontend  validation
+    Backend validation
+    Database validation
+*/
