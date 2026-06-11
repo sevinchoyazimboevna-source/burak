@@ -115,10 +115,23 @@
 # print(isThereProperty({"bmw": "Porsche"}, "bmw"))
 
 
-print("===========MITASK-R==============")
+# print("===========MITASK-R==============")
 
-def calculate(expression):
-    return eval(expression)
-print(calculate("3+4"))
-print(calculate("77000+77"))
-print(calculate("777000+777"))
+# def calculate(expression):
+#     return eval(expression)
+# print(calculate("3+4"))
+# print(calculate("77000+77"))
+# print(calculate("777000+777"))
+
+
+
+print("===========MITASK-S==============")
+
+def missingNumber(arr):
+    n = len(arr)
+
+    for i in range(n + 1):
+        if i not in arr:
+            return i
+
+print(missingNumber([2, 4, 3, 5, 1, 8, 9,7, 0]))
