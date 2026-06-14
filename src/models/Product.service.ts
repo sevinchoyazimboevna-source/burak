@@ -2,12 +2,13 @@
 import {Product, ProductInput, ProductUpdateInput} from "../libs/types/product";
 import Errors, { HttpCode, Message } from "../libs/Errors";
 import { shapeIntMongooseObjectId } from "../libs/config";
+import ProductModel from "../schema/Product.model";
 
 class ProductService {
    private readonly productModel;
 
     constructor() {
-        this.productModel = ProductService;
+        this.productModel = ProductModel;
 
     }
 
