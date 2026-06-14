@@ -15,7 +15,7 @@ routerAdmin
 .get('/signup', restaurantController.getSignup)
 .post('/signup',
 makeUploader("members").single("memberImage"),    
-restaurantController.processSignup);
+restaurantController.processSignup);  // bu ni retoran controllerdaki req file ga tenglayabmiz
 
 routerAdmin
 .get('/logout', restaurantController.logout)
@@ -30,8 +30,7 @@ productController.getAllProducts);
 
 routerAdmin.post('/product/create',
 restaurantController.verifyRestaurant, 
-// uploadProductImage.single("productImage"),
-makeUploader("products").array("productImages", 5),
+makeUploader("products").single("productImages"),
 productController.createNewProduct);
 
 routerAdmin.post('/product/:id',

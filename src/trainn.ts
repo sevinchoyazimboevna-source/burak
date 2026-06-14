@@ -89,3 +89,7 @@ PROJECT STANDARTS:
     Backend validation
     Database validation
 */
+
+
+// malumotlar bizni servirimizda joylashadi
+//  ekan-databaseda faqat uni linki turadi//
