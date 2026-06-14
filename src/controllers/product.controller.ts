@@ -29,7 +29,7 @@ productController.getAllProducts = async (req: Request, res: Response) => {
 productController.createNewProduct = async (req: AdminRequest, res: Response) => {
     try {
         console.log("createNewProduct");
-        console.log("req_files:",req.files);
+        console.log("req_files:",req.files); //login
     if(!req.files?.length)
         throw new Errors(HttpCode.INTERNAL_SERVER_ERROR, Message.CREATE_FAILED); //kamida 1 rasim joylash kerak
     
@@ -54,7 +54,11 @@ productController.createNewProduct = async (req: AdminRequest, res: Response) =>
 productController.updateChosenProduct = async (req: Request, res: Response) => {
     try {
         console.log("updateChosenProduct");
-        
+        const id = req.params.id as string;  //perams property ni idsi
+  
+        const result = await productService.updateChosenProduct(id, req.body);
+
+        res.status(HttpCode.OK).json({data: result});
     } catch (err) {
         console.log("ERROR, updateChosenProduct:", err)
         if (err instanceof Errors) res.status(err.code).json(err);
