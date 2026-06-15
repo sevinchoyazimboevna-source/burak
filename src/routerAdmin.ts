@@ -25,8 +25,8 @@ routerAdmin
 //Product
 
 routerAdmin.get('/product/all', 
-restaurantController.verifyRestaurant,
-productController.getAllProducts);
+restaurantController.verifyRestaurant, //murojat kilayotgan member ayanan restoran member ekanini tekshiramiz
+productController.getAllProducts); //yonaltiramiz
 
 routerAdmin.post('/product/create',
 restaurantController.verifyRestaurant, 
