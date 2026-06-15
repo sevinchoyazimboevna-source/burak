@@ -125,13 +125,22 @@
 
 
 
-print("===========MITASK-S==============")
+# print("===========MITASK-S==============")
 
-def missingNumber(arr):
-    n = len(arr)
+# def missingNumber(arr):
+#     n = len(arr)
 
-    for i in range(n + 1):
-        if i not in arr:
-            return i
+#     for i in range(n + 1):
+#         if i not in arr:
+#             return i
 
-print(missingNumber([2, 4, 3, 5, 1, 8, 9,7, 0]))
+# print(missingNumber([2, 4, 3, 5, 1, 8, 9,7, 0]))
+
+print("===========MITASK-T==============")
+
+def sortedArrays(arr1, arr2):
+    sorting = arr1 + arr2
+    sorting.sort()
+    return sorting
+
+print(sortedArrays([2,4,7,3], [1,5,7,9,0]))
