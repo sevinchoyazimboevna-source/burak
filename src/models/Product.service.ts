@@ -16,9 +16,9 @@ class ProductService {
 
     //SSR
 
-public async getAllProducts(): Promise<Product[]> { //product of array - productni ichida qaytarish kerak
+public async getAllProducts(): Promise<Product[]> { //product of array - array ni ichida productlani qaytarish kerak
   const result = await this.productModel
-  .find()
+  .find()  //products collectionda mavjud bolgan dakumentlani alish uchun
   .exec();
   if(!result) throw new Errors(HttpCode.NOT_FOUND,
      Message.NO_DATA_FOUND);
@@ -27,7 +27,7 @@ public async getAllProducts(): Promise<Product[]> { //product of array - product
 }
 
 
-    public async createNewProduct(input: ProductInput): Promise<Product> {
+public async createNewProduct(input: ProductInput): Promise<Product> {
      try {
         return await this.productModel.create(input);
     } catch (err) {

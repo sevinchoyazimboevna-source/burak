@@ -29,6 +29,12 @@ app.use(morgan(MORGAN_FORMAT));
 
 
 /*2-SESSION */
+// 2 tur 
+// 1authorization
+// 2authentication 
+
+
+
 app.use(
     session({
     secret: String(process.env.SESSION_SECRET),

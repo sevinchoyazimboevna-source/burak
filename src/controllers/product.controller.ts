@@ -56,7 +56,7 @@ productController.createNewProduct = async (req: AdminRequest, res: Response) =>
 productController.updateChosenProduct = async (req: Request, res: Response) => {
     try {
         console.log("updateChosenProduct");
-        const id = req.params.id as string;  //perams property ni idsi
+        const id = req.params.id as string;  //params property ni idsi
   
         const result = await productService.updateChosenProduct(id, req.body);
 
