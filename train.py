@@ -147,14 +147,16 @@
 
 
 
-print("===========MITASK-v==============")
+# print("===========MITASK-v==============")
 
-def count_chars(s):
-    result = {}
-    print(result)
-    for char in s:
-        result[char] = result.get(char, 0) + 1
-    return result
+# def count_chars(s):
+#     result = {}
+#     print(result)
+#     for char in s:
+#         result[char] = result.get(char, 0) + 1
+#     return result
 
-print(count_chars("Sevincgoy"))
-print(count_chars("Angel"))
+# print(count_chars("Sevincgoy"))
+# print(count_chars("Angel"))
+
+# print("===========MITASK-v==============")
