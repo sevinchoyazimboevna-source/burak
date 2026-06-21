@@ -136,11 +136,25 @@
 
 # print(missingNumber([2, 4, 3, 5, 1, 8, 9,7, 0]))
 
-print("===========MITASK-T==============")
+# print("===========MITASK-T==============")
 
-def sortedArrays(arr1, arr2):
-    sorting = arr1 + arr2
-    sorting.sort()
-    return sorting
+# def sortedArrays(arr1, arr2):
+#     sorting = arr1 + arr2
+#     sorting.sort()
+#     return sorting
 
-print(sortedArrays([2,4,7,3], [1,5,7,9,0]))
+# print(sortedArrays([2,4,7,3], [1,5,7,9,0]))
+
+
+
+print("===========MITASK-v==============")
+
+def count_chars(s):
+    result = {}
+    print(result)
+    for char in s:
+        result[char] = result.get(char, 0) + 1
+    return result
+
+print(count_chars("Sevincgoy"))
+print(count_chars("Angel"))
