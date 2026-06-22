@@ -159,4 +159,17 @@
 # print(count_chars("Sevincgoy"))
 # print(count_chars("Angel"))
 
-# print("===========MITASK-v==============")
+print("===========MITASK-W==============")
+
+def bo_array(arr, size):
+    result = []
+
+    for a in range(0, len(arr), size):
+      b = arr[a : a + size]
+      result.append(b)
+
+    return result
+
+print(bo_array([1,2,3,4,5,7], 1))
+print(bo_array([1,2,3,4,5,7], 2))
+print(bo_array([1,2,3,4,5,7], 3))
