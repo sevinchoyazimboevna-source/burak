@@ -159,17 +159,31 @@
 # print(count_chars("Sevincgoy"))
 # print(count_chars("Angel"))
 
-print("===========MITASK-W==============")
+# print("===========MITASK-W==============")
 
-def bo_array(arr, size):
-    result = []
+# def bo_array(arr, size):
+#     result = []
 
-    for a in range(0, len(arr), size):
-      b = arr[a : a + size]
-      result.append(b)
+#     for a in range(0, len(arr), size):
+#       b = arr[a : a + size]
+#       result.append(b)
 
-    return result
+#     return result
 
-print(bo_array([1,2,3,4,5,7], 1))
-print(bo_array([1,2,3,4,5,7], 2))
-print(bo_array([1,2,3,4,5,7], 3))
+# print(bo_array([1,2,3,4,5,7], 1))
+# print(bo_array([1,2,3,4,5,7], 2))
+# print(bo_array([1,2,3,4,5,7], 3))
+
+print("===========MITASK-X==============")
+
+def countOccurrences(obj, key):
+    count = 0
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            if k == key:
+                count += 1
+            count += countOccurrences(v, key)
+    return count
+
+data = {"angel": "A", "S": {"angel": "x"}}
+print(countOccurrences(data, "angel"))  # → 2
