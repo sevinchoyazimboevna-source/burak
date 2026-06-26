@@ -174,16 +174,23 @@
 # print(bo_array([1,2,3,4,5,7], 2))
 # print(bo_array([1,2,3,4,5,7], 3))
 
-print("===========MITASK-X==============")
+# print("===========MITASK-X==============")
 
-def countOccurrences(obj, key):
-    count = 0
-    if isinstance(obj, dict):
-        for k, v in obj.items():
-            if k == key:
-                count += 1
-            count += countOccurrences(v, key)
-    return count
+# def countOccurrences(obj, key):
+#     count = 0
+#     if isinstance(obj, dict):
+#         for k, v in obj.items():
+#             if k == key:
+#                 count += 1
+#             count += countOccurrences(v, key)
+#     return count
 
-data = {"angel": "A", "S": {"angel": "x"}}
-print(countOccurrences(data, "angel"))  # → 2
+# data = {"angel": "A", "S": {"angel": "x"}}
+# print(countOccurrences(data, "angel"))  
+
+print("===========MITASK-Y==============")
+
+def umumiy(arr1, arr2):
+    return list(set(arr1) & set(arr2))
+
+print(umumiy([1, 2, 3], [3, 5, 0, 7, 3]))  
