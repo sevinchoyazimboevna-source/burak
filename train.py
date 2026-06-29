@@ -188,9 +188,19 @@
 # data = {"angel": "A", "S": {"angel": "x"}}
 # print(countOccurrences(data, "angel"))  
 
-print("===========MITASK-Y==============")
+# print("===========MITASK-Y==============")
 
-def umumiy(arr1, arr2):
-    return list(set(arr1) & set(arr2))
+# def umumiy(arr1, arr2):
+#     return list(set(arr1) & set(arr2))
 
-print(umumiy([1, 2, 3], [3, 5, 0, 7, 3]))  
+# print(umumiy([1, 2, 3], [3, 5, 0, 7, 3]))  
+
+print("===========MITASK-Z==============")
+
+def hisobla(arr):
+    return sum(x for x in arr if x % 2 == 0)
+
+# Test
+print(hisobla([1, 2, 3]))  # 2
+print(hisobla([2, 4, 6]))  # 12
+print(hisobla([1, 3, 5]))  # 0
