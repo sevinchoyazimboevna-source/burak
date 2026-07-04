@@ -1,7 +1,6 @@
 import { T } from '../libs/types/common'
 import { NextFunction, Request, Response } from 'express'
-import { LoginInput, Member, MemberInput } from '../libs/types/member';
-import { ExtendedRequest } from '../libs/types/common';
+import {  ExtendedRequest, LoginInput, Member, MemberInput } from '../libs/types/member';
 import { MemberType } from '../libs/enums/member.enum';
 import MemberService from '../models/Member.service';
 import Errors, { HttpCode, Message } from '../libs/Errors';
@@ -74,12 +73,11 @@ memberController.login = async (
 memberController.logout = (req: ExtendedRequest, res: Response) => {
     try{
         console.log("logout");
-        res.cookie("accesToken", null, {maxAge: 0, httpOnly: true});
-        res.cookie("accessToken", null, {maxAge: 0, httpOnly: true});
-        res.status(HttpCode. OK).json({logout: true});
+        res.cookie("accesToken", null, {maxAge: 0, httpOnly: true}); //cookie ni ochirish ozini oz destroy qiladi
+        res.status(HttpCode. OK).json({logout: true}); //logout qilgandan keyin frontend ga logout true qaytaradi 
     } catch(err) {
         console.log("ERROR, login:", err);
-        if (err instanceof Errors) res.status(err.code).json(err);
+        if (err instanceof Errors) res.status(err.code).json(err); 
         else res.status(Errors.standart.code).json(Errors.standart);
     }
 }

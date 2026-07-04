@@ -98,5 +98,5 @@ PROJECT STANDARTS:
 
 
 
-// jwt- jsonwebtoken
+// jwt- jsonwebtoken payload -data 
 // cookie-parser
