@@ -195,12 +195,12 @@
 
 # print(umumiy([1, 2, 3], [3, 5, 0, 7, 3]))  
 
-print("===========MITASK-Z==============")
+# print("===========MITASK-Z==============")
 
-def hisobla(arr):
-    return sum(x for x in arr if x % 2 == 0)
+# def hisobla(arr):
+#     return sum(x for x in arr if x % 2 == 0)
 
-# Test
-print(hisobla([1, 2, 3]))  # 2
-print(hisobla([2, 4, 6]))  # 12
-print(hisobla([1, 3, 5]))  # 0
+# # Test
+# print(hisobla([1, 2, 3]))  # 2
+# print(hisobla([2, 4, 6]))  # 12
+# print(hisobla([1, 3, 5]))  # 0
