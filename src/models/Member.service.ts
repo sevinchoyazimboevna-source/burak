@@ -60,12 +60,12 @@ class MemberService {
     }
 
 
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
     public async getMemberDetail(member: Member): Promise<Member> {
         const memberId = shapeIntMongooseObjectId(member._id);
         const result = await this.memberModel.
