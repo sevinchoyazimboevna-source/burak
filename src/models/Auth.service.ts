@@ -6,7 +6,10 @@ import jwt from "jsonwebtoken"
 import { AUTH_TIMER } from './../libs/config';
 
 class AuthService {
-    constructor() {}
+    private readonly secretToken;
+    constructor() {
+        this.secretToken = process.env.SECRET_TOKEN as string;
+    }
 
     public createToken(payload: Member) {
         return new Promise((resolve, reject) => {
@@ -18,6 +21,14 @@ class AuthService {
             });
         });
     }
+
+    public async checkAuth(token: string): Promise<Member> {
+        const result: Member = (await jwt.verify(token, this.secretToken)) as Member;
+        console.log(`---[AUTH] memberNick: ${result.memberNick} ---`);
+        return result;
+    }
+
+
 }
 
 export default AuthService;
