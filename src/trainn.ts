@@ -94,3 +94,9 @@ PROJECT STANDARTS:
 
 // malumotlar bizni servirimizda joylashadi
 //  ekan-databaseda faqat uni linki turadi//
+
+
+
+
+// jwt- jsonwebtoken
+// cookie-parser
