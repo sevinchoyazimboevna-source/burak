@@ -26,6 +26,10 @@ uploader("members")
 .single("memberImage"), //multer orqali rasm qabul qib serverga yuklash
 memberController.updateMember);
 
+router.get("/member/top-users",
+    memberController.getTopUsers
+);
+
 /** Product */
 
 
