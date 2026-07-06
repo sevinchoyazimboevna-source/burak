@@ -24,6 +24,7 @@ const app = express(); //express ni chakirish
 console.log("dirname", __dirname);
 app.use(express.static(path.join(__dirname, "public"))); //publica ulash
 // use methodni chaqirib bu middleware integration pattern. Static methodidan foydalanib path orqali manzilni beramiz
+app.use("/uploads", express.static("./uploads")); //uploads ni ochiq qilish
 app.use(express.urlencoded({ extended: true})); //bu Traditional api ga hizmat qilib html kodlarni chaqirish
 app.use(express.json())  //json formatdaki datani object korinishga otkazadi va Rest api ga hizmat kiiladi
 app.use(cookieParser())  //cookie parserni chaqirib cookie larni oqish va yozish uchun hizmat qiladi

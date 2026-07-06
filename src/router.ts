@@ -2,6 +2,7 @@ import express, {Request, Response} from "express";
 const router = express.Router();
 import memberController from "./controllers/member.controller";
 // default chaqirilganda yaxlit chaqiriladi
+import uploader from "./libs/utils/uploader"
 
 /** Member */
 router.post("/member/login", memberController.login);
@@ -18,6 +19,12 @@ router.get("/member/detail",
     memberController.verifyAuth,
     memberController.getMemberDetail,
 );
+
+router.post("/member/update", 
+    memberController.verifyAuth, //auth tekshirish
+uploader("members")
+.single("memberImage"), //multer orqali rasm qabul qib serverga yuklash
+memberController.updateMember);
 
 /** Product */
 
