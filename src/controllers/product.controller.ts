@@ -34,7 +34,7 @@ productController.getProducts = async (req: Request, res: Response) => {
 
         res.status(HttpCode.OK).json(result);
     } catch (err) {
-        console.log("ERROR, getProducts:", err)
+        console.log("ERROR, getProduct:", err)
         if (err instanceof Errors) res.status(err.code).json(err); 
         else res.status(Errors.standart.code).json(Errors.standart);
     }
@@ -44,16 +44,16 @@ productController.getProduct = async (req: ExtendedRequest, res: Response) => {
     try {
         console.log("getProduct");
         const {id} = req.params;
-        const memberId = req.member?._id ?? null, 
-           result =  await productService.getProduct(memberId, id);
-        
+        const memberId = req.member?._id ?? null,
+        result =  await productService.getProduct(memberId, id as string);
 
         res.status(HttpCode.OK).json(result);
     } catch (err) {
         console.log("ERROR, getProduct:", err)
         if (err instanceof Errors) res.status(err.code).json(err); 
         else res.status(Errors.standart.code).json(Errors.standart);
-}
+    }
+};
 
 
 //SSR
@@ -86,14 +86,14 @@ productController.createNewProduct = async (req: AdminRequest, res: Response) =>
     });
     await productService.createNewProduct(data);
     res.send(`<script> alert("Successfully creation"); window.location.replace
-    ('/admin/product/all) </script>`);
+    ('/admin/product/all') </script>`);
         
     } catch (err) {
         console.log("ERROR, createNewProduct:", err);
         const message = 
         err instanceof Errors ? err.message : Message.SOMETHING_WENT_WRONG; 
        res.send(`<script> alert("${message}"); window.location.replace
-    ('/admin/product/all) </script>`);
+    ('/admin/product/all') </script>`);
     }
     
 };
@@ -113,6 +113,6 @@ productController.updateChosenProduct = async (req: Request, res: Response) => {
     }
     
 };
-}
+
 
 export default productController;
