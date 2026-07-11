@@ -104,21 +104,17 @@ class MemberService {
 
     };
 
-    public async addUserPoint(member: Member, point: number): Promise<Member> {
+   public async addUserPoint(member: Member, point: number): Promise<Member> {
         const memberId = shapeIntMongooseObjectId(member._id);
 
+
         return await this.memberModel
-        .findOneAndUpdate({_id: memberId, memberType: MemberType.USER,
-            memberStatus: MemberStatus.ACTIVE,
-        },
-        {
-            $inc: {
-                memberPoint: point
-            }
-        },
-        {new: true}
-    )
-    .exec();
+            .findOneAndUpdate(
+                { _id: memberId, memberType: MemberType.USER, memberStatus: MemberStatus.ACTIVE },
+                { $inc: { memberPoints: point } },
+                { new: true },)
+            .exec()
+
     }
  
     /** SSR */
