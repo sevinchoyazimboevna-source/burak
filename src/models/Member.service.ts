@@ -102,6 +102,23 @@ class MemberService {
         if (!result) throw new Errors(HttpCode.NOT_FOUND, Message.NO_DATA_FOUND);
        return result;
 
+    };
+
+    public async addUserPoint(member: Member, point: number): Promise<Member> {
+        const memberId = shapeIntMongooseObjectId(member._id);
+
+        return await this.memberModel
+        .findOneAndUpdate({_id: memberId, memberType: MemberType.USER,
+            memberStatus: MemberStatus.ACTIVE,
+        },
+        {
+            $inc: {
+                memberPoint: point
+            }
+        },
+        {new: true}
+    )
+    .exec();
     }
  
     /** SSR */
