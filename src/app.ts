@@ -1,3 +1,4 @@
+import cors from "cors";
 import express from 'express';
 import path from "path"; //Core package buni ustanovka qib otirmimiz  
 import router from './router'; 
@@ -27,6 +28,10 @@ app.use(express.static(path.join(__dirname, "public"))); //publica ulash
 app.use("/uploads", express.static("./uploads")); //uploads ni ochiq qilish
 app.use(express.urlencoded({ extended: true})); //bu Traditional api ga hizmat qilib html kodlarni chaqirish
 app.use(express.json())  //json formatdaki datani object korinishga otkazadi va Rest api ga hizmat kiiladi
+app.use(cors
+    ({credentials: true,
+        origin: true,
+})); 
 app.use(cookieParser())  //cookie parserni chaqirib cookie larni oqish va yozish uchun hizmat qiladi
 app.use(morgan(MORGAN_FORMAT));
 

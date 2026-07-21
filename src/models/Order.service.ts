@@ -25,7 +25,7 @@ class OrderService {
     public async createOrder(member: Member, input: OrderItemInput[]): Promise<Order> {
         const memberId = shapeIntMongooseObjectId(member._id);
 
-        const amount = input.reduce((accumulator: number, item: OrderItemInput) => {
+        const amount = input.reduce((accumulator: number, item: OrderItemInput) => {  
             return accumulator + item.itemPrice * item.itemQuantity
         }, 0);
 
