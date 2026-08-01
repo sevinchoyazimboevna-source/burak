@@ -1,4 +1,4 @@
-import { shapeIntMongooseObjectId } from "../libs/config";
+import { shapeIntoMongooseObjectId } from "../libs/config";
 import { MemberStatus, MemberType } from "../libs/enums/member.enum";
 import Errors, { HttpCode, Message } from "../libs/Errors";
 import { LoginInput, Member, MemberInput, MemberUpdateInput } from "../libs/types/member";
@@ -72,7 +72,7 @@ class MemberService {
  
  
     public async getMemberDetail(member: Member): Promise<Member> {
-        const memberId = shapeIntMongooseObjectId(member._id);
+        const memberId = shapeIntoMongooseObjectId(member._id);
         const result = await this.memberModel.
         findOne({_id: memberId, memberStatus: MemberStatus.ACTIVE})
         .exec()
@@ -84,7 +84,7 @@ class MemberService {
     public async updateMember(
        member: Member, input: MemberUpdateInput):
        Promise<Member> {
-       const memberId = shapeIntMongooseObjectId(member._id);
+       const memberId = shapeIntoMongooseObjectId(member._id);
        const result = await this.memberModel.findByIdAndUpdate
        ({_id: memberId}, input, {new: true})
        .exec();
@@ -105,7 +105,7 @@ class MemberService {
     };
 
    public async addUserPoint(member: Member, point: number): Promise<Member> {
-        const memberId = shapeIntMongooseObjectId(member._id);
+        const memberId = shapeIntoMongooseObjectId(member._id);
 
 
         return await this.memberModel
@@ -176,7 +176,7 @@ class MemberService {
  
  
    public async updateChosenUser(input: MemberUpdateInput): Promise<Member> {
-        input._id = shapeIntMongooseObjectId(input._id);
+        input._id = shapeIntoMongooseObjectId(input._id);
         const result = await this.memberModel
        .findByIdAndUpdate({_id: input._id }, input, {new: true })
        .exec();
